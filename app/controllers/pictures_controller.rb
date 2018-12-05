@@ -10,11 +10,11 @@ class PicturesController < ApplicationController
   end
 
   def create
-    Picture.create(tweet_params)
+    Picture.create(image: picture_params[:image], text: picture_params[:text], user_id: current_user.id)
   end
 
   private
-  def tweet_params
+  def picture_params
     params.permit(:image, :text)
   end
 

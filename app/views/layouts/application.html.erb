@@ -24,7 +24,7 @@
       <div class="nav-wrapper green">
         <a href="#!" class="brand-logo center">picterest</a>
         <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> -->
-        
+
         <!-- <ul class="right hide-on-med-and-down">
           <li><a href="#">Sas</a></li>
           <li><a href="#">about</a></li>
@@ -33,7 +33,7 @@
         <% if user_signed_in? %>
   <div class="user_nav grid-6">
     <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-    <a class="post" href="/tweets/new">投稿する</a>
+    <a class="post" href="/pictures/new">投稿する</a>
   </div>
 <% else %>
   <div class="grid-6">
