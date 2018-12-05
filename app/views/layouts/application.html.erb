@@ -24,11 +24,23 @@
       <div class="nav-wrapper green">
         <a href="#!" class="brand-logo center">picterest</a>
         <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> -->
-        <ul class="right hide-on-med-and-down">
+        
+        <!-- <ul class="right hide-on-med-and-down">
           <li><a href="#">Sas</a></li>
           <li><a href="#">about</a></li>
           <li><a href="#">services</a></li>
-        </ul>
+        </ul> -->
+        <% if user_signed_in? %>
+  <div class="user_nav grid-6">
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+    <a class="post" href="/tweets/new">投稿する</a>
+  </div>
+<% else %>
+  <div class="grid-6">
+    <%= link_to "ログイン", new_user_session_path, class: 'post' %>
+    <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+  </div>
+<% end %>
         <!-- <ul class="side-nav" id="mobile-demo">
           <li><a href="sass.html">Sass</a></li>
           <li><a href="badges.html">Components</a></li>
