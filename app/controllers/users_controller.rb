@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
   def show
-    @pictures = current.user.picture.order("created_at DESC")
+    @pictures = current_user.pictures.order("created_at DESC")
   end
 end
