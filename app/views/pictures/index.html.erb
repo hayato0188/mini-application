@@ -1,15 +1,17 @@
 <div class="contents row" >
   <% @pictures.each do |picture| %>
-    <div class="content_post" style="background-image: url(<%= picture.image %>);">
+    <div class="content_post materialboxed" width="650" style="background-image: url(<%= picture.image %>);">
       <% if user_signed_in? && current_user.id == picture.user_id %>
         <div class="more">
-
+        <a class="btn-floating red">
+          <i class="large material-icons">mode_edit</i>
+        </a>
           <ul class="more_list">
             <li>
-              <%= link_to '編集', "/pictures/#{picture.id}/edit", method: :get %>
+              <%= link_to '編集', "/pictures/#{picture.id}/edit", method: :get ,class: "btn-floating yellow darken-1", id: "material-icons"%>
             </li>
             <li>
-              <%= link_to '削除', "/pictures/#{picture.id}", method: :delete %>
+              <%= link_to '削除', "/pictures/#{picture.id}", method: :delete, class: "btn-floating green darken-1", id: "material-icons" %>
             </li>
           </ul>
         </div>
@@ -28,4 +30,3 @@
         <%= simple_format(picture.text) %>
     </div>
   <% end %>
-</div>
