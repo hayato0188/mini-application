@@ -20,6 +20,7 @@
       src="https://code.jquery.com/jquery-3.3.1.js"
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
       crossorigin="anonymous"></script>
+    <script src="/path/to/masonry.pkgd.min.js"></script>
 
   </head>
   <body>
@@ -44,6 +45,13 @@
     <script>
     $(document).ready(function(){
     $('.materialboxed').materialbox();
+    });
+  </script>
+  <script>
+    $('.grid').masonry({
+      // options
+      itemSelector: '.grid-item',
+      columnWidth: 200
     });
   </script>
   </body>
