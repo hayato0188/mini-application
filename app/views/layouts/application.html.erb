@@ -22,6 +22,7 @@
       crossorigin="anonymous"></script>
 
   </head>
+  <body>
     <%= render partial: "layouts/header" %>
 
     <%= yield %>
@@ -35,6 +36,15 @@
         $('.sidenav').sidenav();
       });
     </script>
-
+    <script>
+      $(document).ready(function(){
+      $('.fixed-action-btn').floatingActionButton();
+      });
+    </script>
+    <script>
+    $(document).ready(function(){
+    $('.materialboxed').materialbox();
+    });
+  </script>
   </body>
 </html>

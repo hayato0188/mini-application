@@ -1,5 +1,5 @@
 <div class="contents row">
-  <%= form_tag("/pictures/#{@picture.id}", method: :patch ) do %>
+  <%= form_for(@picture) do %>
     <h3>
       編集する
     </h3>
